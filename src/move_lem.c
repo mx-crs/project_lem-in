@@ -28,18 +28,18 @@ void	ft_move_lem(t_lemin *lemin)
 
 	i = 0;
 	ft_lems_init(lemin, lems);
-	// while (lemin->input_data[i])
-	// {
-	// 	ft_putstr(lemin->input_data[i++]);
-	// 	ft_putchar('\n');
-	// }
-	// ft_putchar('\n');
+	while (lemin->input_data[i])
+	{
+		ft_putstr(lemin->input_data[i++]);
+		ft_putchar('\n');
+	}
+	ft_putchar('\n');
 	i = lemin->s_room_cnt + 1;
 	while (--i > 0)
 	{
 		if (ft_is_lems_in_heap(lems, lemin->lem_cnt))
 			ft_get_lem(lems, lemin);
-		// ft_print_filled_rooms(lemin);
+		ft_print_filled_rooms(lemin);
 		ft_move_forward(lemin);
 		if (!ft_is_lems_in_heap(lems, lemin->lem_cnt) &&
 			!ft_is_lems_in_rooms(lemin))
